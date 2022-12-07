@@ -1,10 +1,16 @@
 window.onload = () => {
     var socket = io();
+    var match = ["w4F1shqvCcQ", "_gWyMXpBcTY"];
     socket.emit("getChoice");
     socket.on("choice", (res) => {
-        console.log(res)
-        let c1 = res[0];
-        let c2 = res[1];
-        document.getElementById("fill").innerHTML = c1.name + c1.url + c2.name + c2.url;
+        document.getElementById("music0").src = "https://www.youtube.com/embed/" + res[0];
+        document.getElementById("music1").src = "https://www.youtube.com/embed/" + res[1];
+        match = res;
     });
+    document.getElementById("button0").onclick = () => {
+        socket.emit("choice", match, 0);
+    }
+    document.getElementById("button1").onclick = () => {
+        socket.emit("choice", match, 1);
+    }
 }

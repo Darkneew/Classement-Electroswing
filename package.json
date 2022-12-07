@@ -1,14 +1,18 @@
 {
   "name": "electroswing",
   "version": "1.0.0",
-  "description": "",
-  "main": "links.js",
+  "description": "Simply a small project to create the best electroswing playlist possible",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "getLinks": "node links.js",
+    "run": "node index.js",
+    "init": "node init.js",
+    "getNames": "py analyseur.py"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "better-sqlite3": "^8.0.1",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
