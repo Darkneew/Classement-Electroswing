@@ -1,7 +1,7 @@
 const fs = require('fs');
 const YouTube = require('youtube-node');
 var youTube = new YouTube();
-youTube.setKey('AIzaSyDZQFxpfTjC_gMrPM7bzUjYAtpJRCM5qi0');
+youTube.setKey('insert key here');
 
 const getLinks = async (queries, links, callback, i) => {
     if (i == 0) return console.log(queries, links);
